@@ -1,0 +1,12 @@
+<div class="container product-container">
+    <div class="row">
+        <div class="col-6" *ngFor="let item of products">
+            <div class="card" [routerLink]="['/project/product-details/',item.id]">
+                <h5 class="">{{item.title}}</h5>
+                <img src="{{item.thumbnail}}">
+                <b><span>Price :</span>$ {{item.price}}</b>
+                <button class="btn btn-primary" [routerLink]="['/project/product-edit/',item.id]">Edit</button>
+            </div>
+        </div>
+    </div>
+</div>

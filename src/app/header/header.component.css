@@ -1,0 +1,20 @@
+.navbar{
+    background-color: blueviolet;padding:0;height:55px;box-shadow: 8px 8px 8px rgb(161, 161, 161);
+}
+.navbar ul a{
+    color:white
+}
+.navbar ul a:hover{
+    color:blueviolet;
+    background-color: white;
+}
+.active a{
+    color:blueviolet!important;
+    background-color: white; 
+}
+li{
+    height:55px;
+}
+ul a{
+    height:55px;display: flex;align-items: center;
+}

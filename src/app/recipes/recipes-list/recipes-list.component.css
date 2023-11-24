@@ -1,0 +1,6 @@
+.img-col img{
+    border-radius:50%;height:45px;width:45px
+}
+.list-group-item .row{
+ align-items: center;display: flex;
+}

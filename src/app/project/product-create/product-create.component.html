@@ -1,0 +1,53 @@
+<h3>Create New</h3>
+<div class="container">
+    <div class="col-12">
+        <form [formGroup]="reactiveForm" (ngSubmit)="onSubmit(reactiveForm)" novalidate>
+            <div class="row">
+                <div class="col-6 create-col">
+                    <label for="title">Title </label>
+                    <input type="text" id="title" name="title" formControlName="title">
+                </div>
+
+                <div class="col-6 create-col">
+                    <label for="brand">Brand </label>
+                    <input type="text" id="brand" name="brand" formControlName="brand">
+                </div>
+
+                <div class="col-6 create-col">
+                    <label for="category"> Category </label>
+                    <input type="text" id="category" name="category" formControlName="category">
+                </div>
+                <div class="col-6 create-col">
+                    <label for="description"> Description </label>
+                    <textarea type="text" id="description" name="description" formControlName="description"></textarea>
+                </div>
+                <div class="col-6 create-col">
+                    <label for="discountPercentage"> Discount Percentage </label>
+                    <input type="number" id="discountPercentage" name="discountPercentage"
+                        formControlName="discountPercentage">
+                </div>
+                <div class="col-6 create-col">
+                    <label for="price">Price </label>
+                    <input type="number" id="price" name="price" formControlName="price">
+                </div>
+                <div class="col-6 create-col">
+                    <label for="rating">Rating </label>
+                    <input type="number" id="rating" name="rating" formControlName="rating">
+                </div>
+                <div class="col-6 create-col">
+                    <label for="thumbnail">Thumbnail</label>
+                    <input type="text" id="thumbnail" name="thumbnail" formControlName="thumbnail">
+                </div>
+                <label style="font-weight: bold;">Image URL's</label>
+                <div formArrayName="images" *ngFor="let images of formData.controls; let i = index;">
+                    
+                    <div [formGroupName]="i" class="col-6 create-col">
+                        <input formControlName="url" placeholder="url">
+                    </div>
+                </div>
+            </div>
+            <button (click)="addItem()">Add</button>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</div>

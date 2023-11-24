@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'recipes-book';
+  item: string = "recipes"
+  onNavigate(event:string){
+    this.item=event;
+  }
 }

@@ -1,0 +1,13 @@
+.container .create-col{
+    display: flex;
+    flex-direction: column;margin-bottom: 15px;
+}
+.container .create-col input{
+    height:45px;border-color: rgb(236, 241, 240);border-radius:7px
+}
+.container .create-col textarea{
+    border-color: rgb(236, 241, 240);border-radius:7px
+}
+.container .create-col label{
+    font-weight: bold;
+}
